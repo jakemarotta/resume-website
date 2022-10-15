@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route, useLocation } from 'react-router-dom';
 import Drawer from 'react-modern-drawer';
+import { TransitionGroup, CSSTransition, SwitchTransition } from 'react-transition-group';
 import { Navbar } from './components/Navbar';
 import { About } from './pages/About';
 import { Home } from './pages/Home';
@@ -13,6 +14,7 @@ import { MobileMenu } from './components/MobileMenu';
 export const App: React.FC = () => {
   const [viewportSize, setViewportSize] = useState<number>(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const location = useLocation();
 
   const isMobile = viewportSize < 600;
 
@@ -33,7 +35,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <HashRouter>
+    <>
       <Navbar 
         isMobile={isMobile}
         handleToggleMobileMenu={handleToggleMobileMenu}
@@ -42,22 +44,32 @@ export const App: React.FC = () => {
         <MobileMenu handleToggleMobileMenu={handleToggleMobileMenu} />
       </Drawer>
       <div className={styles.App__body}>
-        <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/resume">
-          <Resume />
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-      </Switch>
+        <SwitchTransition>
+          <CSSTransition
+            key={location.pathname}
+            transitionName="fade"
+            classNames="page"
+            timeout={300}
+            unmountOnExit
+          >
+            <Switch location={location}>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/resume">
+                <Resume />
+              </Route>
+              <Route path="/projects">
+                <Projects />
+              </Route>
+            </Switch>
+          </CSSTransition>
+        </SwitchTransition>
       </div>
-    </HashRouter>
+    </>
   );
 
 };

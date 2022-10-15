@@ -2,39 +2,115 @@
 
 .Home {
   text-align: center;
+  background-image: url('/public/assets/images/home-bg.jpg');
+  background-size: cover;
+  height: 100%;
 
-  &_logo {
-    height: 40vmin;
-    pointer-events: none;
+  &__overlay {
+    background-color: $dark;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
   }
 
-  &_header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(0.625rem + 2vmin);
+  &__firstName,
+  &__lastName,
+  &__tagline {
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    animation-duration: 1.5s;
+    font-family: 'Text-Body-Bold';
+    opacity: 0;
+    color: $active;
   }
-  &_link {
-    color: rgb(112, 76, 182);
+
+  &__firstName {
+    animation-delay: 0.5s;
+    position: absolute;
+    top: 15rem;
+    left: 5rem;
+    font-size: 8rem;
+  }
+
+  &__lastName {
+    animation-delay: 1.25s;
+    position: absolute;
+    top: 21.5rem;
+    left: 28rem;
+    font-size: 8rem;
+  }
+
+  &__tagline {
+    animation-delay: 1.75s;
+    position: absolute;
+    top: 29rem;
+    left: 5.5rem;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    &__firstName,
+    &__lastName {
+      font-size: 5rem;
+    }
+    &__firstName {
+      top: 16rem;
+    }
+    &__lastName {
+      top: 20rem;
+      left: 15rem;
+    }
+    &__tagline {
+      animation-delay: 1.75s;
+      position: absolute;
+      font-size: 1.5rem;
+      top: 24.7rem;
+    }
+  }
+
+  @media (max-width: 517px) {
+    &__firstName,
+    &__lastName {
+      font-size: 3.5rem;
+    }
+    &__firstName {
+      top: 12rem;
+      left: 2rem;
+    }
+    &__lastName {
+      top: 15rem;
+      left: 8.3rem;
+    }
+    &__tagline {
+      animation-delay: 1.75s;
+      position: absolute;
+      font-size: 1rem;
+      top: 18.7rem;
+      left: 2.3rem;
+    }
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .Home_logo {
-    animation: Home-logo-float infinite 3s ease-in-out;
-  }
-}
-
-@keyframes Home-logo-float {
+@keyframes fadeInDown {
   0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
+     opacity: 0;
+     transform: translateY(-20px);
   }
   100% {
-    transform: translateY(0px);
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+     opacity: 0;
+     -webkit-transform: translateY(-20px);
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
   }
 }

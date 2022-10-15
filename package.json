@@ -19,6 +19,7 @@
     "react-modern-drawer": "^1.1.2",
     "react-redux": "^8.0.4",
     "react-router-dom": "^5.3.4",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
+    "@types/react-transition-group": "^4.4.5",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
     "babel-jest": "^29.1.2",

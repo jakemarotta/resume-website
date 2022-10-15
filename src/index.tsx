@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.scss';
 import 'react-modern-drawer/dist/index.css';
+import { HashRouter } from 'react-router-dom';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -14,7 +15,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <HashRouter>
+        <App />
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );
