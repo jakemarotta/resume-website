@@ -1,0 +1,60 @@
+@import '../../../styles';
+
+.Navbar {
+  @include flex-row-center;
+  justify-content: space-between;
+  height: $navbar-height;
+  background-color: $bg-primary;
+  position: fixed;
+  width: 100%;
+
+  &__brand {
+    font-family: "Text-Body-Bold";
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    color: $active;
+  }
+
+  &__left,
+  &__right {
+    @include flex-row-center;
+    padding: 0.4rem 1.5rem;
+  }
+
+  &__link {
+    @extend .noSelect;
+    text-decoration: none;
+    color: $light;
+    font-family: "Text-Body-Light", serif;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+
+    &:global(.active),
+    &:hover {
+      color: $active;
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    align-self: stretch;
+    margin: 0.125rem 0.75rem;
+    background-color: $light;
+
+    &.clear {
+      background-color: transparent;
+      margin: 0.125rem 0.5rem;
+    }
+  }
+
+  &__menuWrapper {
+    @include flex-row-center;
+    padding: 0.25rem;
+    margin-right: 1rem;
+    border: 2px solid $light;
+    border-radius: 4px;
+    color: $light;
+    cursor: pointer;
+  }
+}

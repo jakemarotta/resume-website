@@ -1,0 +1,33 @@
+@import '../../../styles';
+
+.MobileMenu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  
+  &__link {
+    @extend .noSelect;
+    display: block;
+    text-decoration: none;
+    color: $dark;
+    font-family: "Text-Body-Light", serif;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+
+    &:global(.active),
+    &:hover {
+      color: $active;
+    }
+  }
+
+  &__socialContainer {
+    margin-top: 1.5rem;
+    @include flex-row-center;
+
+    > *:not(:last-child) {
+      margin-right: 0.75rem;
+    }
+  }
+}

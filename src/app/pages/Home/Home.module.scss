@@ -1,0 +1,40 @@
+@import '../../../styles';
+
+.Home {
+  text-align: center;
+
+  &_logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  &_header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(0.625rem + 2vmin);
+  }
+  &_link {
+    color: rgb(112, 76, 182);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Home_logo {
+    animation: Home-logo-float infinite 3s ease-in-out;
+  }
+}
+
+@keyframes Home-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

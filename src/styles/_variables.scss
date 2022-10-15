@@ -1,0 +1,19 @@
+
+$primary: #548463;
+$secondary: #FFB289;
+$active: #8ED3A3;
+
+$light: #f8f9fa;
+$dark: #212529;
+
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+
+$bg-primary: scale-color($primary, $lightness: -35%);
+
+$disabled: #D3DFC6;
+$disabled-dark: scale-color($disabled, $lightness: -15%);
+
+$navbar-height: 3.5rem;

@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": ["TSTypeParameterInstantiation"]
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": ["off"],
+    "@typescript-eslint/strict-boolean-expressions": ["off"],
+    "@typescript-eslint/member-delimiter-style": ["error", {
+      "multiline": {
+        "delimiter": "semi",
+        "requireLast": true
+      },
+      "simgleline": {
+        "delimiter": "semi",
+        "requireLast": false
+      },
+      "multilineDetection": "brackets"
+    }],
+    "quotes": ["error", "single"],
+    "padded-blocks": ["off", "always"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
