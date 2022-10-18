@@ -1,5 +1,78 @@
 @import '../../../styles';
 
 .About {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 4rem;
 
+  &__pageTitle {
+    font-family: 'Header';
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  &__contentWrapper {
+    border: 3px solid $primary;
+    border-radius: 0.5rem;
+    max-width: 40rem;
+    padding: 0.8rem;
+  }
+
+  &__contentHeader {
+    @include flex-row-center;
+    margin-bottom: 0.8rem;
+  }
+
+  &__contentBody {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__avatar {
+    width: 40%;
+    margin-right: 0.8rem;
+  }
+
+  &__title {
+    font-family: 'Header';
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+
+  &__subtitle {
+    font-family: 'Header';
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 700px) {
+    padding: 2.5rem;
+    &__title {
+      font-size: 2rem;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+    &__contentBody {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    padding: 1.5rem;
+    &__avatar {
+      width: 25%;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__subtitle {
+      font-size: 1.25rem;
+    }
+    &__contentBody {
+      font-size: 1rem;
+    }
+  }
 }

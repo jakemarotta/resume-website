@@ -7,9 +7,10 @@
   background-color: $bg-primary;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
   &__brand {
-    font-family: "Text-Body-Bold";
+    font-family: "Header";
     font-size: 2rem;
     cursor: pointer;
     margin-right: 2rem;
@@ -26,7 +27,7 @@
     @extend .noSelect;
     text-decoration: none;
     color: $light;
-    font-family: "Text-Body-Light", serif;
+    font-family: "Header", serif;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 

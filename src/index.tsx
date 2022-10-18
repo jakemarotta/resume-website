@@ -5,6 +5,7 @@ import { store } from './store';
 import { App } from './app/App';
 import reportWebVitals from './reportWebVitals';
 
+import './i18n';
 import './index.scss';
 import 'react-modern-drawer/dist/index.css';
 import { HashRouter } from 'react-router-dom';

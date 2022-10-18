@@ -21,7 +21,7 @@
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
     animation-duration: 1.5s;
-    font-family: 'Text-Body-Bold';
+    font-family: 'Header';
     opacity: 0;
     color: $active;
   }
@@ -32,6 +32,7 @@
     top: 15rem;
     left: 5rem;
     font-size: 8rem;
+    font-weight: bold;
   }
 
   &__lastName {
@@ -40,6 +41,7 @@
     top: 21.5rem;
     left: 28rem;
     font-size: 8rem;
+    font-weight: bold;
   }
 
   &__tagline {
@@ -80,14 +82,14 @@
       left: 2rem;
     }
     &__lastName {
-      top: 15rem;
+      top: 14.8rem;
       left: 8.3rem;
     }
     &__tagline {
       animation-delay: 1.75s;
       position: absolute;
       font-size: 1rem;
-      top: 18.7rem;
+      top: 18.3rem;
       left: 2.3rem;
     }
   }

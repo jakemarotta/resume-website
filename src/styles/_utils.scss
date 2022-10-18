@@ -4,6 +4,19 @@
   @include flex-row-center;
 }
 
+.columnCenter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.fullCenter {
+  display: flex;
+  flex-flow: column-nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .noSelect {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -11,4 +24,9 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+}
+
+.fillParent {
+  width: 100%;
+  height: 100%;
 }
