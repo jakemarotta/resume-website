@@ -1,5 +1,51 @@
 @import '../../../styles';
 
 .Resume {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 3rem;
 
+  &__contentWrapper {
+    padding: 1.5rem;
+    width: 60%;
+    border: 3px solid $primary;
+    border-radius: 0.5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-family: 'Header';
+    font-weight: bold;
+    color: $dark;
+    margin-bottom: 0.75rem;
+  }
+
+  &__about {
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    padding: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__sectionTitle {
+    font-size: 1.4rem;
+    font-family: 'Header';
+    color: $primary;
+    margin-top: 0.75rem;
+    border-bottom: 1px solid $primary;
+  }
+
+  @media (max-width: 1200px) {
+    &__contentWrapper {
+      width: 80%;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 1.5rem;
+    &__contentWrapper {
+      width: 90%;
+      max-width: calc(90% - 3rem);
+    }
+  }
 }
