@@ -9,8 +9,8 @@ export const Home: React.FC = () => {
   return (
     <div className={styles.Home}>
       <div className={styles.Home__overlay} />
-      <div className={styles.Home__firstName}>{t('first_name')}</div>
-      <div className={styles.Home__lastName}>{t('last_name')}</div>
+      <div className={styles.Home__firstName}>{t('firstName')}</div>
+      <div className={styles.Home__lastName}>{t('lastName')}</div>
       <div className={styles.Home__tagline}>{t('tagline')}</div>
     </div>
   );

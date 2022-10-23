@@ -23,26 +23,26 @@ export const About: React.FC = () => {
         </header>
         <main className={styles.About__contentBody}>
           <section className={styles.About__bio}>
-            {t('aboutBody')}
+            {t('aboutBio')}
           </section>
           <section className={styles.About__grid}>
             <div className={styles.About__grid__row}>
               <div className={styles.About__grid__textBlock}>
                 <div className={styles.About__grid__textBlock__wrapper}>
-                  I have been writing for as long as I can remember, and it is something that I love to do. Outside of work, I enjoy writing creative pieces and working on my latest story.
+                  {t('aboutWriting')}
                 </div>
               </div>
               <div className={styles.About__grid__imageBlock}>
-                <img src={writing} alt="Writing stock image" />
+                <img src={writing} alt={t('aboutWritingAlt')} />
               </div>
             </div>
             <div className={styles.About__grid__row}>
               <div className={styles.About__grid__imageBlock}>
-                <img src={mma} alt="MMA Fighting stock image" />
+                <img src={mma} alt={t('aboutMMAAlt')} />
               </div>
               <div className={styles.About__grid__textBlock}>
                 <div className={styles.About__grid__textBlock__wrapper}>
-                  I'm a skilled MMA fighter who is competitive and enthusiastic about the sport. I have years of experience both fighting and training, and I'm always looking for new challenges.
+                  {t('aboutMMA')}
                 </div>
               </div>
             </div>

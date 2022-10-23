@@ -1,8 +1,8 @@
 {
-  "home:first_name": "Eddison",
-  "home:last_name": "Kirby",
-  "home:tagline": "Lorem Ipsum Dolor sit Amet",
-  "about:title": "Eddison Kirby",
-  "about:subtitle": "Abrogado Licenciado",
-  "about:body": "¡Hola, me llamo Eddison Kirby! Soy un abogado con experiencia que representa a clientes en una amplia gama de asuntos legales. En mi tiempo como abogado, he representado con éxito a clientes en los tribunales y he logrado resultados positivos para ellos. Mis habilidades y experiencia me permiten brindar a mis clientes la mejor representación posible."
+  "firstName": "Eddison",
+  "lastName": "Kirby",
+  "tagline": "Lorem Ipsum Dolor sit Amet",
+  "aboutTitle": "Eddison Kirby",
+  "aboutSubtitle": "Abrogado Licenciado",
+  "aboutBio": "¡Hola, me llamo Eddison Kirby! Soy un abogado con experiencia que representa a clientes en una amplia gama de asuntos legales. En mi tiempo como abogado, he representado con éxito a clientes en los tribunales y he logrado resultados positivos para ellos. Mis habilidades y experiencia me permiten brindar a mis clientes la mejor representación posible."
 }
