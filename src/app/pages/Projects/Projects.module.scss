@@ -6,9 +6,6 @@
   column-count: auto;
   -moz-column-width: 400px;
   column-width: 400px;
-  // -webkit-column-break-inside: avoid-column;
-  // break-inside: avoid-column;
-  // page-break-inside: avoid;
 
   > * {
     -webkit-column-break-inside: avoid;
@@ -22,6 +19,10 @@
   &__previewContainer {
     position: relative;
     padding: 0.75rem;
+  }
+
+  :global(.MiniForceGraph__wrapper) {
+    height: 300px;
   }
 
   @media (max-width: 700px) {

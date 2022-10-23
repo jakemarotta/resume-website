@@ -5,6 +5,11 @@
   "aboutTitle": "Eddison Kirby",
   "aboutSubtitle": "Attorney at Law",
   "aboutBody": "I am an experienced attorney who has a successful track record of fighting for the rights of my clients. I have a proven ability to get the results my clients need, and I have a reputation for being a tenacious litigator. I have a wide range of legal experience, and I am prepared to handle any legal challenge that my clients may face.",
-  "projectVolumeKnob": "You can turn this knob by clicking on it and dragging to the left and right. It was made using JavaScript and CSS, and the image was downloaded from the internet.",
-  "projectChingAsianBistro": "This website is for an Asian bistro located in Franklin, TN. It was made with React and uses public JSON source files to make it easy to update menu items."
-}
+  "projectVolumeKnobTitle": "Rotating Knob",
+  "projectVolumeKnobBody": "You can turn this knob by clicking on it and dragging to the left and right. It was made using JavaScript and CSS, and the image was downloaded from the internet.",
+  "projectChingAsianBistroTitle": "chingasianbistro.com",
+  "projectChingAsianBistroAlt": "Ching Asian Bistro website",
+  "projectChingAsianBistroBody": "This website is for an Asian bistro located in Franklin, TN. It was made with React and uses public JSON source files to make it easy to update menu items.",
+  "projectForceGraphTitle": "Force-Directed Graph",
+  "projectForceGraphBody": "This is a simple force-directed graph with draggable nodes, written using d3.js. Click \"Go\" below to see the example that this one was based off of."
+} 

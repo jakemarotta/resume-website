@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import volumeKnob from '@/assets/images/volume-knob.png';
 
@@ -10,13 +10,19 @@ export interface VolumeKnobProps {
 export const VolumeKnob: React.FC<VolumeKnobProps> = (props) => {
   const { sensitivity = 10, width = 150 } = props;
 
-  const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [dragPositiontX, setDragPositionX] = useState<number>(0);
-  const [rotateDegrees, setRotateDegrees] = useState<number>(0);
+  const isDragging = useRef<boolean>(false);
+  const dragPositionX = useRef<number>(0);
+  const [rotateDegrees, _setRotateDegrees] = useState<number>(0);
+  const rotateDegreesRef = useRef<number>(0);
+
+  const setRotateDegrees = (n: number) => {
+    rotateDegreesRef.current = n;
+    _setRotateDegrees(n)
+  }
 
   const onMouseUp =(e: MouseEvent|TouchEvent) => {
-    setIsDragging(false);
-    setDragPositionX(0);
+    isDragging.current = false;
+    dragPositionX.current = 0;
     removeWindowListeners();
   }
 
@@ -29,14 +35,14 @@ export const VolumeKnob: React.FC<VolumeKnobProps> = (props) => {
       const event = e as MouseEvent;
       xPosition = event.clientX;
     }
-    const xDelta = dragPositiontX - xPosition;
-    setDragPositionX(xPosition);
-    setRotateDegrees(rotateDegrees - ((xDelta / 10) * sensitivity));
+    const deltaX = dragPositionX.current - xPosition;
+    dragPositionX.current = xPosition;
+    setRotateDegrees(rotateDegreesRef.current - ((deltaX / 10) * sensitivity));
   }, [isDragging]);
 
   const onMouseDown = (e: React.MouseEvent) => {
-    setDragPositionX(e.clientX);
-    setIsDragging(true);
+    dragPositionX.current = e.clientX;
+    isDragging.current = true;
     addWindowListeners();
   }
 

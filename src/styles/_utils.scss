@@ -30,3 +30,42 @@
   width: 100%;
   height: 100%;
 }
+
+$spacing-types: (
+  "p": "padding",
+  "m": "margin",
+);
+$spacing-sides: (
+  "t": "top",
+  "r": "right",
+  "b": "bottom",
+  "l": "left"
+);
+$spacing-sizes: (
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 2rem,
+  6: 3rem
+);
+@each $typeLetter, $type in $spacing-types {
+  @each $num, $amount in $spacing-sizes {
+    .#{$typeLetter}-#{$num} {
+      #{$type}: $amount;
+    }
+    .#{$typeLetter}x-#{$num} {
+      #{$type}-left: $amount;
+      #{$type}-right: $amount;
+    }
+    .#{$typeLetter}y-#{$num} {
+      #{$type}-top: $amount;
+      #{$type}-bottom: $amount;
+    }
+    @each $sideLetter, $side in $spacing-sides {
+      .#{$typeLetter}#{$sideLetter}-#{$num} {
+        #{$type}-#{$side}: $amount;
+      }
+    }
+  }
+}
